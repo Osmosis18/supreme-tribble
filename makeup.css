@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.parent{
+    display: flex;
+    flex-direction: row;
+    background-color: silver;
+    justify-content: space-around;
+    padding: 2rem ;
+    gap: 3rem;
+}
+.parent h3{
+    font-size: 3rem ;
+    color: rgba(46, 185, 109);
+    text-shadow: 0 0 2px white;
+    font-family: ibm plex;
+}
+.parent p{
+    margin: 0.4rem 0;
+    font-family: cursive;
+    animation-name: changecolor;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    
+}
+.parent i{
+    display: block;
+    margin: 1rem 0;
+}
+.parent button{
+    border: none;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    background-color: rgb(46, 185, 109);
+    color: gray;
+}
+
+ .parent img{
+     flex: 1;
+     animation-name: animeImg;
+     animation-duration: 10s;
+     
+ }
+
+.parent div{
+    flex: 1;
+}
+
+
+@keyframes changecolor {
+    from{
+        color: chartreuse;
+        /* transform: rotate(360deg); */
+    }
+    to{
+        color: blue;
+        font-size: 1.5rem;
+        transform: rotate(360deg);
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .parent{
+    flex-direction: column;
+
+    }
+}
+
+@keyframes animeImg{
+    25%{
+        transform: scale(0.5);
+    }
+    50%{
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(0.9);
+    }
+
+}
